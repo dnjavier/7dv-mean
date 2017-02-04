@@ -1,0 +1,59 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+$fa-font-path: "../bower_components/font-awesome/fonts";
+@import '../bower_components/font-awesome/scss/font-awesome';
+@import 'scss/variables';
+
+/**
+ * App-wide Styles
+ */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+html, body {
+  height: 100%;
+
+  &>div {
+    height: 100%;
+  }
+}
+
+p, h1, h2, h3, h4, a, button, select {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a, select {
+  &:hover, 
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+// Component styles are injected through grunt
+// injector
+@import 'account/dashboard/animal/animal';
+@import 'account/dashboard/animals/animals';
+@import 'account/dashboard/dashboard';
+@import 'account/dashboard/seeAnimal/seeAnimal';
+@import 'account/login/login';
+@import 'admin/admin';
+@import 'main/main';
+@import 'scss/components';
+@import 'scss/variables';
+@import '../components/footer/footer';
+@import '../components/modal/modal';
+// endinjector

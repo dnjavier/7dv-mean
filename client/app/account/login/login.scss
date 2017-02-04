@@ -1,0 +1,33 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  background-color: $sidebar-background-color;
+  color: $sidebar-font-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &>div {
+    max-width: 50%;
+  }
+
+  .form {
+    width: 100%;
+    background-color: $background-content-color;
+
+    label {
+      color: #555;
+    }
+
+    .btn:hover{
+      background: -webkit-linear-gradient(top, #f54248 0%,#fe3555 50%,#fe2f5b 100%);
+      background: linear-gradient(to bottom, #f54248 0%,#fe3555 50%,#fe2f5b 100%);
+      color: #fff;
+    }
+  }
+
+  .system-description {
+    margin: 15px 0;
+    font-size: 18px;
+  }
+}

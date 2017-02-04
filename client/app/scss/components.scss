@@ -1,0 +1,25 @@
+//BUTTONS
+.btn {
+  background-color: transparent;
+  border: 1px solid #555;
+  min-width: 130px;
+  min-height: 50px;
+  font-size: 20px;
+  color: #555;
+  font-weight: 400;
+  margin-right: 10px;
+  transition: all 0.3s ease 0s;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $sidebar-font-color;
+  }
+}
+
+.btn-full {
+  width: 100%;
+}

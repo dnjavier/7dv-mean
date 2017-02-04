@@ -1,0 +1,107 @@
+<div class="animal">
+  <div class="container">
+
+    <div class="title">
+      <h1>Agregar un nuevo animal</h1>
+    </div>
+    <p ng-if="animal.errorMessage" class="error-msg">{{animal.errorMessage}}</p>
+
+    <form class="form animal-form" name="form" ng-submit="animal.addAnimal(form)" novalidate>
+      
+      <div class="form-group row">
+        <div class="col-xs-4">
+          <label for="">Número:</label>
+          <input id='test' type="text" name="" ng-model="animal.animal.numberId" ng-readonly="animal.isEditing">
+        </div>
+        
+        <div class="col-xs-4">
+          <label for="">Nacimiento:</label>
+          <div class="datepicker">
+            <input ng-disabled="animal.isEditing" date-time="" name="pickerMinDate" ng-model="animal.animal.age" id="pickerMinDate" min-date="minDate" view="date" min-view="date" timezone="UTC" format="DD MMM YYYY" class="ng-scope ng-dirty ng-touched ng-valid ng-valid-min">
+          </div> 
+        </div> 
+
+        <div class="col-xs-4">
+          <label for="">Sexo:</label>
+          <select ng-model="animal.animal.gender" ng-disabled="animal.isEditing">
+            <option value="macho">Macho</option>
+            <option value="hembra">Hembra</option>
+          </select>
+        </div>                
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-xs-4">
+          <label for="">Padre:</label>
+          <input type="text" name="" ng-model="animal.animal.father" ng-readonly="animal.isEditing">
+        </div>
+
+        <div class="col-xs-4">
+          <label for="">Madre:</label>
+          <input type="text" name="" ng-model="animal.animal.mother" ng-readonly="animal.isEditing">
+        </div>
+
+        <div class="col-xs-4">
+          <label for="">Raza:</label>
+          <select ng-model="animal.animal.breed" ng-disabled="animal.isEditing">
+            <option value="brahman">Brahman</option>
+            <option value="nelore">Nelore</option>
+            <option value="nelore">Simbrah</option>
+            <option value="nelore">Indubrazil</option>
+          </select>
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-xs-4">
+          <label for="">Finca:</label>
+          <input type="text" name="" ng-model="animal.animal.farm">
+        </div>
+
+        <div class="col-xs-4">
+          <label for="">Apodo:</label>
+          <input type="text" name="" ng-model="animal.animal.nickname">
+        </div>
+
+        <div class="col-xs-4">
+          <label for="">Peso:</label>
+          <input type="number" name="" ng-model="animal.animal.weight">
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-xs-4">
+          <label for="">Precio:</label>
+          <input type="number" name="" ng-model="animal.animal.price">          
+        </div>
+      </div>
+      <hr>
+      <div class="form-group row">
+        <div class="col-xs-4">
+          <label for="">Favorito:</label>
+          <input type="checkbox" name="" ng-model="animal.animal.favorite">
+        </div>
+
+        <div class="col-xs-4">
+          <label for="">Defectuoso:</label>
+          <input type="checkbox" name="" ng-model="animal.animal.defective">
+        </div>
+
+        <div class="col-xs-4" ng-if="animal.isEditing">
+          <label for="">Vendido:</label>
+          <input type="checkbox" name="" ng-model="animal.animal.sold">
+        </div>
+      </div>
+
+      <button class="btn" type="submit" ng-if="!animal.isEditing">
+        Agregar
+      </button>
+      <button class="btn" type="submit" ng-if="animal.isEditing">
+        Guardar
+      </button>
+
+    </form>
+
+  </div>  
+</div>
+

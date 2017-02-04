@@ -1,0 +1,94 @@
+<div class="see-animal">
+  <div class="container">
+
+    <div class="row animal-details">
+
+      <div class="col-xs-6">
+        <img class="img-responsive" src="assets/images/novillo.png" alt="">
+        <div class="tree-wrapper row">
+          <div class="line vertical center"></div>
+          <div class="col-xs-6 col-xs-offset-3 half-box"></div>
+          <div class="col-xs-6">
+            <a href="#">
+              <span>Padre</span>
+              <span>{{seeAnimal.animal.father}}</span>
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a href="#">
+              <span>Madre</span>
+              <span>{{seeAnimal.animal.mother}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-6 info">
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Número: {{seeAnimal.animal.numberId}}</p>
+          </div>
+        </div>
+        <div class="row" ng-if="seeAnimal.animal.nickname">
+          <div class="col-xs-6">
+            <p>Apodo: {{seeAnimal.animal.nickname}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Sexo: {{seeAnimal.animal.gender}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Edad: {{seeAnimal.animal.months}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Raza: {{seeAnimal.animal.breed}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <p>Finca: {{seeAnimal.animal.farm}}</p>
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn" ui-sref="dashboard.animal({ idAnimal: seeAnimal.animal._id })">Editar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row comments-wrapper">
+      <div class="col-xs-12">
+        <h3>Comentarios:</h3>
+      </div>
+
+      <div class="col-xs-12 comment" ng-repeat="c in seeAnimal.animal.comments">
+        <div class="details">
+          <div class="text">
+            <p class="name">{{ c._author.name }}</p>
+            <p class="date">{{ c.date }}</p>
+          </div>
+          <div class="photo">
+            <img class="img-responsive" src="assets/images/tobias.png" alt="">
+          </div>
+        </div>
+        <div class="description">
+          <div class="msg">
+            <p>{{ c.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 comment-form">
+        <h4 class="header-form">Agregar un nuevo comentario:</h4>
+        <textarea ng-model="seeAnimal.commentDescription" name="" id="" class="col-xs-12" rows="5"></textarea>
+        <button class="btn" ng-click="seeAnimal.addComment(seeAnimal.commentDescription)">Agregar</button>
+      </div>
+    </div>
+
+  </div>  
+</div>
+

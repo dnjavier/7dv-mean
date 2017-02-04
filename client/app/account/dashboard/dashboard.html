@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="header">
+    <div class="circle">
+      <img src="assets/images/tobias.png">
+    </div>
+    <p>{{ dash.getCurrentUser().name }}</p>
+  </div>
+  
+  <section>
+    <div class="title">
+      <h1>Opciones</h1>
+    </div>
+    <ul>
+      <li ui-sref-active="active"><a ui-sref="dashboard.animals"><i class="fa fa-eye" aria-hidden="true"></i>Ver animales</a></li>
+      <li ui-sref-active="active"><a ui-sref="dashboard.animal"><i class="fa fa-plus-circle" aria-hidden="true"></i>Agregar animal</a></li>
+      <li ui-sref-active="active"><a ui-sref="#"><i class="fa fa-line-chart" aria-hidden="true"></i>Estadísticas</a></li>
+    </ul>
+  </section>
+
+  <div class="footer">
+    <a ui-sref="settings" class="title"><h4><i class="fa fa-cog" aria-hidden="true"></i> Cambiar contraseña</h4></a>
+    <a ui-sref="logout" class="title"><h1><i class="fa fa-sign-out" aria-hidden="true"></i> Salir</h1></a>
+  </div>
+</div>
+
+<div class="content">
+  <navbar></navbar>
+  <div ui-view=""></div>
+  <animal></animal>
+</div>

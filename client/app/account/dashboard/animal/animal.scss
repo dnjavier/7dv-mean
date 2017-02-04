@@ -1,0 +1,124 @@
+.animal {
+  padding: 0 25px;
+
+  .container {
+    width: 100%;
+  }
+}
+
+.error-msg {
+  color: red;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.animal-form {
+  margin-bottom: 40px;
+
+  &.form {
+    width: 100%;
+  }
+
+  label {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  select {
+    height: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  input[type='checkbox']{
+    width: auto;
+  }
+
+  .datepicker {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+.form {
+  width: 60%;
+  float: left;
+  background-color: #fff;
+  border: 2px solid #dfdfdf;
+  border-radius: 5px;
+  padding: 15px;
+
+  p {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .row {
+    height: 50px;
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 20px;
+    font-family: 'Titillium Web', sans-serif;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn-male {
+    background-color: #dfdfdf;
+    border-right: 2px solid #fff;
+
+    &.ng-valid-parse {
+      background-color: #7f8fb4;
+      color: #fff;
+    }
+  }
+
+  .btn-female {
+    background-color: #dfdfdf;
+
+    &.ng-valid-parse {
+      background-color: #b47fa1;
+      color: #fff;
+    }
+  }
+
+  .input-group.datepicker {
+    display: inline-block;
+
+    & .input-group-btn, & > div {
+      display: inline-block;
+    }
+  }
+
+  .btn {
+    &.btn-fav.active {
+      background-color: #64c1ca;
+      color: white;
+    }
+
+    &.btn-def.active {
+      background-color: #ca646a;
+      color: white;
+    }
+
+    &.btn-out.active {
+      background-color: #c5ca64;
+      color: white;
+    }
+  }
+}
