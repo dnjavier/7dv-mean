@@ -8,6 +8,10 @@ class AnimalsController {
     this.defAnimals = [];
     this.allAnimals = [];
 
+    //Pagination
+    this.currentPage = 0;
+    this.pageSize = 10;
+
     this.inactiveSubject = false;
     
     $http.get('/api/animals').then(response => {
@@ -58,6 +62,10 @@ class AnimalsController {
 
   toggleSubject(subParam){
     this.inactiveSubject = subParam;
+  }
+
+  numberOfPages() {
+    return Math.ceil(this.allAnimals.length/this.pageSize); 
   }
 
 }

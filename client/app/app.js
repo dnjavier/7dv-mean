@@ -14,6 +14,13 @@ angular.module('adminHatoApp', [
   'datePicker',
   'toaster'
 ])
+  .filter('startFrom', function() {
+    return function (input, start) {
+      start = +start;
+      return input.slice(start);
+    }
+  })
+
   .config(function($urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/dashboard');
