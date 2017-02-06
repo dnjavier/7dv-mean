@@ -18,7 +18,8 @@ angular.module('adminHatoApp.auth')
 
           event.preventDefault();
           return Auth.isLoggedIn(_.noop).then(is => {
-            $state.go(is ? 'main' : 'login');
+            //$state.go(is ? 'main' : 'login');
+            $state.go('login');
           });
         });
       } else {
@@ -28,7 +29,7 @@ angular.module('adminHatoApp.auth')
           }
 
           event.preventDefault();
-          $state.go('main');
+          $state.go('login');
         });
       }
     });

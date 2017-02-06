@@ -17,6 +17,7 @@ angular.module('adminHatoApp')
           var referrer = $state.params.referrer ||
                           $state.current.referrer ||
                           'login';
+          console.log(referrer);
           Auth.logout();
           $state.go(referrer);
         }
@@ -38,6 +39,7 @@ angular.module('adminHatoApp')
   .run(function($rootScope) {
     $rootScope.$on('$stateChangeStart', function(event, next, nextParams, current) {
       if (next.name === 'logout' && current && current.name && !current.authenticate) {
+        alert(referrer);
         next.referrer = current.name;
       }
     });
